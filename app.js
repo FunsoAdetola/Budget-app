@@ -104,18 +104,8 @@ function addExpense(expense){
 function showBalance(){
  const expense = totalExpense();
  const total = parseInt(budgetAmount.textContent) - expense;
-
  balanceAmount.textContent = total;
-  if (total<0){
-    balance.classList.remove("showGreen", "showBlack");
-   balance.classList.add("showRed");
- } else if(total > 0){
-  balance.classList.remove("showRed", "showBlack");
-  balance.classList.add("showGreen");
- } else if( total === 0){
-  balance.classList.remove("showRed", "showGreen");
-  balance.classList.add("showBlack");
- }
+  
 }
 
 
