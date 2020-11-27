@@ -29,23 +29,7 @@
     budgetInput.value = "";
   }
 }
-  // show balance
-  function showBalance(){
-   const expense = totalExpense();
-   const total = parseInt(budgetAmount.textContent) - expense;
 
-   balanceAmount.textContent = total;
-    if (total<0){
-      balance.classList.remove("showGreen", "showBlack");
-     balance.classList.add("showRed");
-   } else if(total > 0){
-    balance.classList.remove("showRed", "showBlack");
-    balance.classList.add("showGreen");
-   } else if( total === 0){
-    balance.classList.remove("showRed", "showGreen");
-    balance.classList.add("showBlack");
-   }
- }
 
  function submitExpenseForm(){
    const expenseValue = expenseInput.value;
@@ -129,6 +113,12 @@ function totalExpense(){
  expenseAmount.textContent = total;
   return total;
 }
+
+  // show balance
+  function showBalance(){
+   const expense = totalExpense();
+   const total = parseInt(budgetAmount.textContent) - expense;
+ }
 
 
 
