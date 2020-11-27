@@ -101,6 +101,12 @@ function addExpense(expense){
 
 }
 
+  // show balance
+  function showBalance(){
+   const expense = totalExpense();
+   const total = parseInt(budgetAmount.textContent) - expense;
+ }
+
 
 function totalExpense(){
   let total = 0;
@@ -114,11 +120,7 @@ function totalExpense(){
   return total;
 }
 
-  // show balance
-  function showBalance(){
-   const expense = totalExpense();
-   const total = parseInt(budgetAmount.textContent) - expense;
- }
+
 
 
 
