@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+ <!-- bootstrap css -->
+ <link rel="stylesheet" href="css/bootstrap.css">
+ <!-- main css -->
+ <link rel="stylesheet" href="css/styles.css">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+ <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>budget app</title>
+ <style>
+ </style>
+</head>
+
+<body>
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-11 mx-auto pt-3">
+    <!-- title -->
+    <h3 class="text-uppercase mb-4">budget app</h3>
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- budget feedback -->
+      <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+      <!-- budget form -->
+      <form id="budget-form" class=" budget-form">
+       <h5 class="text-capitalize">please enter your budget</h5>
+       <div class="form-group">
+        <input type="number" class="form-control budget-input" id="budget-input">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize budget-submit" id="income-submit">calculate</button>
+      </form>
+     </div>
+     <div class="col-md-7">
+      <!-- app info -->
+      <div class="row my-3">
+       <div class="col-4 text-center mb-2">
+        <h6 class="text-uppercase info-title">budget</h6>
+        <span class="budget-icon"><i class="fa fa-money"></i></span>
+        <h4 class="text-uppercase mt-2 budget" id="budget"><span>N </span><span id="budget-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">expenses</h6>
+        <span class="expense-icon"><i class="fa fa-credit-card"></i></span>
+        <h4 class="text-uppercase mt-2 expense" id="expense"><span>N </span><span id="expense-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">balance</h6>
+        <span class="balance-icon"><i class="fa fa-dollar"></i></span>
+        <h4 class="text-uppercase mt-2 balance" id="balance"> <span>N </span><span id="balance-amount">0</span></h4>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- expense feedback -->
+      <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+        <!-- <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div> -->
+      <!-- expense form -->
+      <form id="expense-form" class=" expense-form">
+       <h6 class="text-capitalize">please enter your expense</h6>
+       <div class="form-group">
+        <input type="text" class="form-control expense-input" id="expense-input">
+       </div>
+       <h6 class="text-capitalize">Priority Level<br />(1 as high, 2 as medium, 3 as low)</h6>
+       <div class="form-group">
+        <input type="number" class="form-control expense-input" id="priority-input">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">add expense</button>
+        <button type="button" class="btn text-capitalize budget-submit" id="budget-submit">calculate budget</button>
+      </form>
+      
+     </div>
+     <div class="col-md-7 my-3">
+      <!-- expense list -->
+      <div class="expense-list" id="expense-list">
+
+       <div class="expense-list__info d-flex justify-content-between text-capitalize">
+        <h5 class="list-item">expense title</h5>
+        <h5 class="list-item">Priority</h5>
+          <h5 class="list-item">Amount</h5>
+        <h5 class="list-item"></h5>
+       </div>
+       <!-- single expense -->
+
+       <div class="expense">
+
+       </div>
+
+       <!-- end of single expense -->
+
+      </div>
+     </div>
+    </div>
+
+
+
+
+   </div>
+  </div>
+ </div>
+
+
+
+
+
+
+ <!-- script js -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
