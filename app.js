@@ -29,7 +29,6 @@
     budgetInput.value = "";
   }
 }
-  // show balance
 
 
  function submitExpenseForm(){
@@ -78,34 +77,41 @@
     }
     itemID++;
     itemList.push(expense);
-    addExpense(expense);
     console.log(itemList);
-
-
   }
 }
 
-// add expense
-function addExpense(expense){
-  calculateBudget.addEventListener("click", function(){
+calculateBudget.addEventListener("click", function(){
+  expenseList.innerHTML = " ";
+  itemList.map((expense) => {
     const div = document.createElement('div');
-    div.classList.add("expense");
-    div.innerHTML = `<div class="expense-item d-flex justify-content-between align-items-baseline">
+  div.classList.add("expense");
+  div.innerHTML = `<div class="expense-item d-flex justify-content-between align-items-baseline">
+  <h6 class="expense-title mb-0 text-uppercase list-item">-${expense.title}</h6>
+  <h5 class="expense-amount mb-0 list-item">${expense.priority}</h5>
+  <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
+ </div>`;
+ expenseList.appendChild(div)
+  })
+  showBalance();
+});
+ 
 
-    <h6 class="expense-title mb-0 text-uppercase list-item">-${expense.title}</h6>
-    <h5 class="expense-amount mb-0 list-item">${expense.priority}</h5>
-    <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
-   </div>`;
-   expenseList.appendChild(div);
-    showBalance();
- });
-
-}
 function showBalance(){
  const expense = totalExpense();
  const total = parseInt(budgetAmount.textContent) - expense;
+
  balanceAmount.textContent = total;
-  
+  if (total<0){
+    balance.classList.remove("showGreen", "showBlack");
+   balance.classList.add("showRed");
+ } else if(total > 0){
+  balance.classList.remove("showRed", "showBlack");
+  balance.classList.add("showGreen");
+ } else if( total === 0){
+  balance.classList.remove("showRed", "showGreen");
+  balance.classList.add("showBlack");
+ }
 }
 
 
